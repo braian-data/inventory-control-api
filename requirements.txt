@@ -1,19 +1,17 @@
-# Core do Framework Web
-fastapi>=0.110.0
-uvicorn[standard]>=0.27.0
+# Core Framework e Servidor WSGI
+Django>=5.0,<6.0
+gunicorn>=21.2.0
 
-# Validação e Gerenciamento de Configuração (Lê o .env nativamente)
-pydantic>=2.6.0
-pydantic-settings>=2.2.0
+# Gerenciamento de Configuração de Ambiente (.env)
+python-decouple>=3.8
 
-# ORM e Migrações
-sqlalchemy>=2.0.0
-alembic>=1.13.0
+# Driver de Banco de Dados (PostgreSQL)
+psycopg2-binary>=2.9.9
 
-# Drivers de Banco de Dados (PostgreSQL)
-asyncpg>=0.29.0      # Driver assíncrono (Alta performance para FastAPI)
-psycopg2-binary>=2.9.0 # Driver síncrono (Necessário para o Alembic/Migrações)
+# Análise de Dados e Cálculo Vetorial
+pandas>=2.2.0
+numpy>=1.26.0
 
-# Segurança e Autenticação (Opcional, para JWT)
-python-jose[cryptography]>=3.3.0
-passlib[bcrypt]>=1.7.4
+# Testes Automatizados
+pytest>=8.0.0
+pytest-django>=4.8.0
